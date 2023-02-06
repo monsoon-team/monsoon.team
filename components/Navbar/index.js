@@ -10,6 +10,15 @@ export default (props) => {
   const links = [
     { name: "Home", href: "/", text: "Home" },
     { name: "Roster", href: "/roster", text: "Roster" },
+    // {
+    //   name: "More",
+    //   href: "#",
+    //   text: "More",
+    //   children: [
+    //     { name: "About", href: "/about", text: "About" },
+    //     { name: "Contact", href: "/contact", text: "Contact" },
+    //   ],
+    // },
     {
       name: "Twitch",
       href: "https://www.twitch.tv/ow_monsoon",
@@ -34,21 +43,51 @@ export default (props) => {
       text: <FontAwesomeIcon icon={faDiscord} />,
       external: true,
     },
-  ].map((link) => (
-    <li className="nav-item" key={link.name}>
-      <a
-        className={
-          props.active === link.name.toLowerCase()
-            ? "nav-link active"
-            : "nav-link"
-        }
-        href={link.href}
-        target={link.external ? "_blank" : ""}
-      >
-        {link.text}
-      </a>
-    </li>
-  ));
+  ].map((link) => {
+    if (link.children)
+      return (
+        <li className="nav-item dropdown" key={link.name}>
+          <a
+            className="nav-link dropdown-toggle"
+            href={link.href}
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            {link.text}
+          </a>
+          <ul className="dropdown-menu">
+            {link.children.map((child) => (
+              <li key={child.name}>
+                <a
+                  className="dropdown-item"
+                  href={child.href}
+                  target={child.external ? "_blank" : ""}
+                >
+                  {child.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </li>
+      );
+
+    return (
+      <li className="nav-item" key={link.name}>
+        <a
+          className={
+            props.active === link.name.toLowerCase()
+              ? "nav-link active"
+              : "nav-link"
+          }
+          href={link.href}
+          target={link.external ? "_blank" : ""}
+        >
+          {link.text}
+        </a>
+      </li>
+    );
+  });
 
   return (
     <nav className="navbar navbar-expand navbar-dark">
