@@ -8,14 +8,14 @@ import {
 
 export default (props) => {
   const links = [
-    { name: "Home", href: "/", text: "Home" },
+    // { name: "About", href: "/about", text: "About" },
     { name: "Roster", href: "/roster", text: "Roster" },
+    // { name: "Academy", href: "/academy", text: "Academy" },
     // {
     //   name: "More",
     //   href: "#",
     //   text: "More",
     //   children: [
-    //     { name: "About", href: "/about", text: "About" },
     //     { name: "Contact", href: "/contact", text: "Contact" },
     //   ],
     // },
