@@ -35,7 +35,23 @@ export default () => {
       character: "Sojourn",
       requestee: "FiftyFree",
     },
+    {
+      voiceline: "Curses and madness be upon you all.",
+      character: "Zenyatta",
+      requestee: "idiota",
+    },
   ];
+
+  const selectedVoiceline = `"${
+    favouriteVoicelines[Math.floor(Math.random() * favouriteVoicelines.length)]
+      .voiceline
+  }" - ${
+    favouriteVoicelines[Math.floor(Math.random() * favouriteVoicelines.length)]
+      .character
+  } (${
+    favouriteVoicelines[Math.floor(Math.random() * favouriteVoicelines.length)]
+      .requestee
+  })`;
 
   return (
     <div class="container fixed-bottom">
@@ -55,13 +71,7 @@ export default () => {
           />
         </a>
 
-        <p class="col-md-4 mb-0 text-muted text-end">
-          {
-            favouriteVoicelines[
-              Math.floor(Math.random() * favouriteVoicelines.length)
-            ].voiceline
-          }
-        </p>
+        <p class="col-md-4 mb-0 text-muted text-end">{selectedVoiceline}</p>
       </footer>
     </div>
   );
