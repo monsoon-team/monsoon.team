@@ -4,7 +4,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 
-import "../assets/css/global.css";
+import "../public/global.css";
 
 import Script from "next/script";
 
@@ -17,6 +17,7 @@ export default function MyApp({ Component, pageProps }) {
         crossorigin="anonymous"
         async
       />
+      <link rel="stylesheet" href="/global.css" />
       <Component {...pageProps} />
     </>
   );
