@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitch,
@@ -140,6 +141,7 @@ export default function Roster() {
         <h1>Active Roster</h1>
         <div className="row text-center text-white mt-5">{Roster}</div>
       </div>
+      <Footer />
     </>
   );
 }
