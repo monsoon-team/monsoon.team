@@ -12,8 +12,6 @@ export default () => {
     return null;
   }
 
-  const currentYear = new Date().getFullYear();
-
   const favouriteVoicelines = [
     {
       voiceline: "Good kitty.",
