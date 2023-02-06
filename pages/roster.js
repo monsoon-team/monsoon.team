@@ -23,6 +23,8 @@ export default function Roster() {
     {
       name: "KrankyGuy",
       role: "Main Tank",
+      roleImage: "/TankIcon.webp",
+      number: "24",
       image: "/roster/KrankyGuy.png",
       socials: {
         twitch: "",
@@ -33,6 +35,8 @@ export default function Roster() {
     {
       name: "Yowaz",
       role: "Flex Tank",
+      roleImage: "/TankIcon.webp",
+      number: "05",
       image: "/roster/Yowaz.png",
       socials: {
         twitch: "",
@@ -43,6 +47,8 @@ export default function Roster() {
     {
       name: "Tinycrusader",
       role: "Main Support",
+      roleImage: "/SupportIcon.webp",
+      number: "13",
       image: "/roster/Tinycrusader.png",
       socials: {
         twitch: "",
@@ -53,6 +59,8 @@ export default function Roster() {
     {
       name: "FiftyFree",
       role: "Flex Support",
+      roleImage: "/SupportIcon.webp",
+      number: "29",
       image: "/roster/FiftyFree.png",
       socials: {
         twitch: "",
@@ -63,6 +71,8 @@ export default function Roster() {
     {
       name: "Ooo",
       role: "Flex Support",
+      roleImage: "/SupportIcon.webp",
+      number: "47",
       image: "/roster/Ooo.png",
       socials: {
         twitch: "",
