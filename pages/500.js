@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Custom404() {
+export default function Custom500() {
   // This is a hack to prevent the page from having issues rehydrating
   const [hasMounted, setHasMounted] = React.useState(false);
 
@@ -12,14 +12,15 @@ export default function Custom404() {
     return null;
   }
 
-  const array404Images = [
-    "/confused-widow.png",
-    "/confused-lucio.png",
-    "/shocked-windings.png",
+  const array500Images = [
+    "/reaper-walkaway.gif",
+    "/ow2-mech.gif",
+    "/doolanbouncemin.gif",
+    "/firestrike.gif",
   ];
 
-  const random404 =
-    array404Images[Math.floor(Math.random() * array404Images.length)];
+  const random500 =
+    array500Images[Math.floor(Math.random() * array500Images.length)];
 
   setInterval(() => {
     let countdown = document.getElementById("countdown");
@@ -35,7 +36,7 @@ export default function Custom404() {
     <div className="perfectCenter">
       <img
         className="mx-auto d-block"
-        src={random404}
+        src={random500}
         style={{
           height: "420px",
           width: "420px",
@@ -43,7 +44,7 @@ export default function Custom404() {
         }}
       />
       <p className="text-center text-white mt-5">
-        <h1>404 - Page Not Found</h1>
+        <h1>500 - Internal Server Error</h1>
         Redirecting to <a href="/">home</a> in <span id="countdown">3</span>{" "}
         seconds...
       </p>
