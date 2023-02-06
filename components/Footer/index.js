@@ -12,7 +12,7 @@ export default () => {
     return null;
   }
 
-  const favouriteVoicelines = [
+  const randomVoiceline = [
     {
       voiceline: "Good kitty.",
       character: "Ana",
@@ -38,18 +38,7 @@ export default () => {
       character: "Zenyatta",
       requestee: "idiota",
     },
-  ];
-
-  const selectedVoiceline = `"${
-    favouriteVoicelines[Math.floor(Math.random() * favouriteVoicelines.length)]
-      .voiceline
-  }" - ${
-    favouriteVoicelines[Math.floor(Math.random() * favouriteVoicelines.length)]
-      .character
-  } (${
-    favouriteVoicelines[Math.floor(Math.random() * favouriteVoicelines.length)]
-      .requestee
-  })`;
+  ][Math.floor(Math.random() * 5)];
 
   return (
     <div class="container fixed-bottom">
@@ -69,7 +58,11 @@ export default () => {
           />
         </a>
 
-        <p class="col-md-4 mb-0 text-muted text-end">{selectedVoiceline}</p>
+        <p class="col-md-4 mb-0 text-muted text-end">
+          {`
+            "${randomVoiceline.voiceline}" - ${randomVoiceline.character} (${randomVoiceline.requestee})
+          `}
+        </p>
       </footer>
     </div>
   );
