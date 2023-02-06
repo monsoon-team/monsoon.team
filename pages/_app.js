@@ -22,7 +22,6 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="/global.css" />
         <Script
           src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
           integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
@@ -32,6 +31,8 @@ export default function MyApp({ Component, pageProps }) {
       </Head>
 
       <Component {...pageProps} />
+
+      <link rel="stylesheet" href="/global.css" />
     </>
   );
 }

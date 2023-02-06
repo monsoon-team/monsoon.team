@@ -8,7 +8,7 @@
 body {
   background: url("/background_texture.png") repeat center center fixed;
   background-size: cover;
-  background-color: var(--monsoon-blue) !important;
+  background-color: var(--monsoon-blue);
   font-family: "Montserrat", sans-serif;
 }
 
