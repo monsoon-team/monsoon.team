@@ -12,6 +12,13 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.perfectCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .fa-twitch {
   color: #9146ff;
 }
