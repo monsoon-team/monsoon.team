@@ -8,6 +8,13 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 
+import Image from "next/image";
+import krankyImage from "../public/roster/KrankyGuy.png";
+import yowazImage from "../public/roster/Yowaz.png";
+import tinycrusaderImage from "../public/roster/Tinycrusader.png";
+import fiftyImage from "../public/roster/FiftyFree.png";
+import oooImage from "../public/roster/Ooo.png";
+
 export default function Roster() {
   // This is a hack to prevent the page from having issues rehydrating
   const [hasMounted, setHasMounted] = React.useState(false);
@@ -26,7 +33,7 @@ export default function Roster() {
       role: "Main Tank",
       roleImage: "/TankIcon.webp",
       number: "24",
-      image: "/roster/KrankyGuy.png",
+      image: krankyImage,
       socials: {
         twitch: "",
         twitter: "KrankyGuy_",
@@ -38,7 +45,7 @@ export default function Roster() {
       role: "Flex Tank",
       roleImage: "/TankIcon.webp",
       number: "05",
-      image: "/roster/Yowaz.png",
+      image: yowazImage,
       socials: {
         twitch: "",
         twitter: "Yowaz_ow",
@@ -50,7 +57,7 @@ export default function Roster() {
       role: "Main Support",
       roleImage: "/SupportIcon.webp",
       number: "13",
-      image: "/roster/Tinycrusader.png",
+      image: tinycrusaderImage,
       socials: {
         twitch: "",
         twitter: "tinycrusader",
@@ -62,7 +69,7 @@ export default function Roster() {
       role: "Flex Support",
       roleImage: "/SupportIcon.webp",
       number: "29",
-      image: "/roster/FiftyFree.png",
+      image: fiftyImage,
       socials: {
         twitch: "",
         twitter: "FiftyFree_",
@@ -74,7 +81,7 @@ export default function Roster() {
       role: "Flex Support",
       roleImage: "/SupportIcon.webp",
       number: "47",
-      image: "/roster/Ooo.png",
+      image: oooImage,
       socials: {
         twitch: "",
         twitter: "lilooo47",
@@ -86,10 +93,11 @@ export default function Roster() {
   const Roster = rosterData.map((player) => (
     <div className="col-12 col-md-6 col-lg-4 mb-4" key={player.name}>
       <div className="card">
-        <img
+        <Image
           src={player.image}
           className="card-img-top"
           alt={player.name}
+          placeholder="blur"
           style={{
             height: "150px",
             objectFit: "cover",

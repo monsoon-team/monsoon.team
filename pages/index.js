@@ -1,5 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Image from "next/image";
+import monsoonLogo from "../public/monsoon-logo.png";
 
 export default function Index() {
   return (
@@ -29,9 +31,10 @@ export default function Index() {
         }}
       >
         <Navbar active={"home"} />
-        <img
+        <Image
           className="centerImage"
-          src="/monsoon-logo.png"
+          src={monsoonLogo}
+          placeholder="blur"
           style={{
             position: "absolute",
             top: "50%",
@@ -39,6 +42,7 @@ export default function Index() {
             transform: "translate(-50%, -50%)",
             zIndex: "1",
             height: "300px",
+            objectFit: "scale-down",
           }}
         />
       </div>
