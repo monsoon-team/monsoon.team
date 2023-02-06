@@ -80,7 +80,7 @@ export default function Roster() {
         youtube: "",
       },
     },
-  ].sort((a, b) => 0.5 - Math.random());
+  ].sort(() => 0.5 - Math.random());
 
   const Roster = rosterData.map((player) => (
     <div className="col-12 col-md-6 col-lg-4 mb-4" key={player.name}>
