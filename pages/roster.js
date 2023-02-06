@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "../components/Navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,6 +8,17 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function Roster() {
+  // This is a hack to prevent the page from having issues rehydrating
+  const [hasMounted, setHasMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setHasMounted(true);
+  }, []);
+
+  if (!hasMounted) {
+    return null;
+  }
+
   const rosterData = [
     {
       name: "KrankyGuy",
@@ -58,7 +70,7 @@ export default function Roster() {
         youtube: "",
       },
     },
-  ];
+  ].sort((a, b) => 0.5 - Math.random());
 
   const Roster = rosterData.map((player) => (
     <div className="col-12 col-md-6 col-lg-4 mb-4" key={player.name}>
