@@ -138,6 +138,20 @@ export default function Roster() {
             ) : null}
           </h3>
         </div>
+        <span
+          style={{
+            position: "absolute",
+            top: "0",
+            left: "0",
+            fontSize: "2rem",
+            fontWeight: "bold",
+            color: "white",
+            padding: "0.25rem 0.5rem",
+            backgroundColor: "rgba(0, 0, 0, 1)",
+          }}
+        >
+          {player.number}
+        </span>
       </div>
     </div>
   ));
