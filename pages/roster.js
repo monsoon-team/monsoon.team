@@ -9,11 +9,16 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import Image from "next/image";
+
 import krankyImage from "../public/roster/KrankyGuy.png";
 import yowazImage from "../public/roster/Yowaz.png";
 import tinycrusaderImage from "../public/roster/Tinycrusader.png";
 import fiftyImage from "../public/roster/FiftyFree.png";
 import oooImage from "../public/roster/Ooo.png";
+
+import tankIcon from "../public/TankIcon.webp";
+import damageIcon from "../public/DamageIcon.webp";
+import supportIcon from "../public/SupportIcon.webp";
 
 export default function Roster() {
   // This is a hack to prevent the page from having issues rehydrating
@@ -31,8 +36,9 @@ export default function Roster() {
     {
       name: "KrankyGuy",
       role: "Main Tank",
-      roleImage: "/TankIcon.webp",
+      roleImage: tankIcon,
       number: "24",
+      rank: "Masters 5",
       image: krankyImage,
       socials: {
         twitch: "",
@@ -43,8 +49,9 @@ export default function Roster() {
     {
       name: "Yowaz",
       role: "Flex Tank",
-      roleImage: "/TankIcon.webp",
+      roleImage: tankIcon,
       number: "05",
+      rank: "Masters 5",
       image: yowazImage,
       socials: {
         twitch: "",
@@ -55,8 +62,9 @@ export default function Roster() {
     {
       name: "Tinycrusader",
       role: "Main Support",
-      roleImage: "/SupportIcon.webp",
+      roleImage: supportIcon,
       number: "13",
+      rank: "Masters 5",
       image: tinycrusaderImage,
       socials: {
         twitch: "",
@@ -67,8 +75,9 @@ export default function Roster() {
     {
       name: "FiftyFree",
       role: "Flex Support",
-      roleImage: "/SupportIcon.webp",
+      roleImage: supportIcon,
       number: "29",
+      rank: "Masters 5",
       image: fiftyImage,
       socials: {
         twitch: "",
@@ -79,8 +88,9 @@ export default function Roster() {
     {
       name: "Ooo",
       role: "Flex Support",
-      roleImage: "/SupportIcon.webp",
+      roleImage: supportIcon,
       number: "47",
+      rank: "Masters 5",
       image: oooImage,
       socials: {
         twitch: "",
@@ -92,7 +102,10 @@ export default function Roster() {
 
   const Roster = rosterData.map((player) => (
     <div className="col-12 col-md-6 col-lg-4 mb-4" key={player.name}>
-      <div className="card">
+      <div
+        className="card"
+        style={{ backgroundColor: "#000", borderRadius: "0" }}
+      >
         <Image
           src={player.image}
           className="card-img-top"
@@ -101,12 +114,35 @@ export default function Roster() {
           style={{
             height: "150px",
             objectFit: "cover",
+            borderRadius: "0",
           }}
         />
-        <div className="card-body">
-          <h2 className="card-title">{player.name}</h2>
-          <h5 className="card-text">{player.role}</h5>
-          <h3 className="row">
+        <div className="card-body" style={{ padding: "15px 5px" }}>
+          <div className="card-title">
+            <h2
+              className="card-title"
+              style={{
+                marginLeft: "-10px",
+                marginRight: "28px",
+              }}
+            >
+              <Image
+                src={player.roleImage}
+                alt={player.role}
+                placeholder="blur"
+                height={30}
+                style={{
+                  verticalAlign: "top",
+                  marginTop: "3px",
+                }}
+              />
+              {player.name}
+            </h2>
+          </div>
+          <h5 className="card-text">
+            #{player.number} - {player.rank} - {player.role}
+          </h5>
+          <h3 className="row mb-0">
             {player.socials.twitch ? (
               <a
                 href={"https://twitch.tv/" + player.socials.twitch}
@@ -138,20 +174,6 @@ export default function Roster() {
             ) : null}
           </h3>
         </div>
-        <span
-          style={{
-            position: "absolute",
-            top: "0",
-            left: "0",
-            fontSize: "2rem",
-            fontWeight: "bold",
-            color: "white",
-            padding: "0.25rem 0.5rem",
-            backgroundColor: "rgba(0, 0, 0, 1)",
-          }}
-        >
-          {player.number}
-        </span>
       </div>
     </div>
   ));
