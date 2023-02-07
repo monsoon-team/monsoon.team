@@ -11,12 +11,12 @@ export default (props) => {
     // { name: "About", href: "/about", text: "About" },
     { name: "Roster", href: "/roster", text: "Roster" },
     // { name: "Academy", href: "/academy", text: "Academy" },
-    {
-      name: "More",
-      href: "#",
-      text: "More",
-      children: [{ name: "Merch", href: "/merch", text: "Merch" }],
-    },
+    // {
+    //   name: "More",
+    //   href: "#",
+    //   text: "More",
+    //   children: [{ name: "Merch", href: "/merch", text: "Merch" }],
+    // },
     {
       name: "Twitch",
       href: "https://www.twitch.tv/ow_monsoon",
