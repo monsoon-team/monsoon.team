@@ -51,7 +51,7 @@ export default function Merch() {
     <>
       <Navbar active={"home"} />
       <div className="container">
-        <h1 className="text-center mt-5">Merch</h1>
+        <h1 className="text-center mt-5 display-1 fw-normal">Merch</h1>
         <div className="row mt-5">{merchCards}</div>
       </div>
       <Footer />

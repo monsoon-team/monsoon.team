@@ -146,7 +146,7 @@ export default function Roster() {
     <>
       <Navbar active={"roster"} />
       <div className="container mt-5 text-center">
-        <h1>Active Roster</h1>
+        <h1 className="display-1 fw-normal">Active Roster</h1>
         <div className="row text-center text-white mt-5">{Roster}</div>
       </div>
       <Footer />
