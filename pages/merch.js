@@ -11,7 +11,7 @@ export default function Merch() {
       image: monsoonMousePad,
       price: 28.95,
       shipping: 15,
-      stripeLinkLive: "https://buy.stripe.com/dR64hy6Vfg8u4WA144",
+      stripeLinkLive: "https://buy.stripe.com/4gw9Em33W7Mafo4cMM",
     },
   ];
 
