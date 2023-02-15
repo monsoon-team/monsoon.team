@@ -44,7 +44,12 @@ export default () => {
     favouriteVoicelines[Math.floor(Math.random() * favouriteVoicelines.length)];
 
   return (
-    <div className="container fixed-bottom">
+    <div
+      className="container fixed-bottom"
+      style={{
+        pointerEvents: "none",
+      }}
+    >
       <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
         <p className="col-md-4 mb-0 text-muted">Est. 2022</p>
 
