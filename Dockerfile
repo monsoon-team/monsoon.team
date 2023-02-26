@@ -1,8 +1,8 @@
 FROM node:19
 WORKDIR /app
-COPY ./www/package.json .
+COPY package.json .
 RUN npm install
-COPY ./www/ .
+COPY . .
 # COPY ./docs/package.json .
 # RUN npm install
 # RUN npm run build

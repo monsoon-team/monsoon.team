@@ -11,12 +11,12 @@ export default (props) => {
     // { name: "About", href: "/about", text: "About" },
     { name: "Roster", href: "/roster", text: "Roster" },
     // { name: "Academy", href: "/academy", text: "Academy" },
-    // {
-    //   name: "More",
-    //   href: "#",
-    //   text: "More",
-    //   children: [{ name: "Merch", href: "/merch", text: "Merch" }],
-    // },
+    {
+      name: "More",
+      href: "#",
+      text: "More",
+      children: [{ name: "Merch", href: "/merch", text: "Merch" }],
+    },
     {
       name: "Twitch",
       href: "https://www.twitch.tv/ow_monsoon",
@@ -88,7 +88,7 @@ export default (props) => {
   });
 
   return (
-    <nav className="navbar navbar-expand navbar-dark">
+    <nav className="navbar navbar-expand-sm navbar-dark">
       <div className="container">
         <a
           className="navbar-brand"
