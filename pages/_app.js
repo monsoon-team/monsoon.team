@@ -29,6 +29,7 @@ export default function MyApp({ Component, pageProps }) {
           crossorigin="anonymous"
           async
         />
+        <title>Monsoon | Overwatch 2 Esports Done Right</title>
       </Head>
 
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
