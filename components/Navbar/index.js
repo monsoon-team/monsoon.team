@@ -88,7 +88,7 @@ export default (props) => {
   });
 
   return (
-    <nav className="navbar navbar-expand navbar-dark">
+    <nav className="navbar navbar-expand-sm navbar-dark">
       <div className="container">
         <a
           className="navbar-brand"
