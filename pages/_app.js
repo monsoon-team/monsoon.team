@@ -30,6 +30,7 @@ export default function MyApp({ Component, pageProps }) {
           async
         />
         <title>Monsoon | Overwatch 2 Esports Done Right</title>
+        <link rel="icon" href="/monsoon-logo-icon-circle.png" />
       </Head>
 
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
