@@ -19,6 +19,46 @@ export default () => {
       requestee: "capyblapy",
     },
     {
+      voiceline: "Someone call the whambulance.",
+      character: "Mercy",
+      requestee: "capyblapy",
+    },
+    {
+      voiceline: "It's in the refridgerator.",
+      character: "Reaper",
+      requestee: "capyblapy",
+    },
+    {
+      voiceline: "I'm on auto pilot.",
+      character: "Pharah",
+      requestee: "Athena",
+    },
+    {
+      voiceline: "I've got a few tricks.",
+      character: "Kiriko",
+      requestee: "Athena",
+    },
+    {
+      voiceline: "I got a present for you.",
+      character: "Brigitte",
+      requestee: "Athena",
+    },
+    {
+      voiceline: "Crushing Machine",
+      character: "Reinhardt",
+      requestee: "Artemis",
+    },
+    {
+      voiceline: "100% German Power!",
+      character: "Reinhardt",
+      requestee: "Artemis",
+    },
+    {
+      voiceline: ";)",
+      character: "D.Va",
+      requestee: "Artemis",
+    },
+    {
       voiceline: "Put me in, coach!",
       character: "Lucio",
       requestee: "KrankyGuy",
